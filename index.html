@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚀 小學數學闖關宇宙</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🎮 數學星際探險</h1>
+        <div class="nav-controls">
+            <select id="grade-selector" onchange="loadCourse()">
+                <option value="grade3_sem2">👦 三年級 (下)</option>
+            </select>
+            <select id="unit-selector" onchange="loadCourse()">
+                <option value="unit1">🌟 第一單元：分數的加減</option>
+                <option value="unit2">🌟 第二單元：除法</option>
+                <option value="unit3">🌟 第三單元：尋找規律</option>
+                <option value="unit4">🌟 第四單元：公斤和公克</option>
+                <option value="unit5">🌟 第五單元：小數</option>
+                <option value="unit6">🌟 第六單元：圓</option>
+                <option value="unit7">🌟 第七單元：乘法與除法</option>
+                <option value="unit8">🌟 第八單元：時間</option>
+                <option value="unit9">🌟 第九單元：統計表</option>
+            </select>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2 id="lesson-title" class="main-title">載入中...</h2>
+        
+        <section id="chapters-container"></section>
+        <section id="lesson-extension" class="card extension-box"></section>
+
+        <section id="quiz-section" class="card quiz-box">
+            <div class="header-actions">
+                <h2 id="quiz-title">🏆 破關測驗</h2>
+                <button type="button" class="random-btn" onclick="randomizeQuiz()">🔀 重新隨機出題</button>
+            </div>
+            <p class="quiz-hint">準備好了嗎？作答完請按最下方的交卷按鈕喔！</p>
+            <form id="quiz-form">
+                <div id="quiz-container"></div>
+                <button type="button" onclick="submitQuiz()" class="submit-btn">🚀 交卷！看我得幾分</button>
+            </form>
+            <div id="quiz-result" class="result-box" style="display: none;"></div>
+        </section>
+
+        <section id="mistakes-section" class="card">
+            <h2>📖 我的錯題本 (本單元)</h2>
+            <p style="color: #E65100; font-weight: bold;">這裡收集了你之前答錯的題目，只要再次挑戰成功，就可以把它們消滅喔！</p>
+            <div id="mistakes-container"></div>
+        </section>
+
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

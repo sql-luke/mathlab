@@ -1,0 +1,504 @@
+const curriculumData = {
+    "grade3_sem2": {
+        "unit1": {
+            title: "🌟 第一單元：分數的加減",
+            subChapters: [
+                { title: "🍕 1-1 和1一樣大的分數", youtubeId: "oC9xNddPBSE", content: "<p>當分子和分母一樣大時，分數就等於 1 喔！例如：4/4 = 1。</p>" },
+                { title: "➕ 1-2 同分母分數的加法", youtubeId: "d5nZmVu9nYc", content: "<p>分母不變，只要把「分子」加起來。</p>" },
+                { title: "➖ 1-3 同分母分數的減法", youtubeId: "_YOxwubFRR4", content: "<p>分母保持不變，只要把「分子」相減。</p>" },
+                { title: "🧩 1-4 分數加減的應用", youtubeId: "YzqLZAtaFZ4", content: "<p>將生活中的情境轉換成分數的加減法算式，並算出答案。</p>" }
+            ],
+            extension: "<h3>💡 舉一反三：生活中的分數魔法</h3><p>遇到完整的「1」時，隨時把它變身成需要的分母，是解決分數問題的最強武器！</p>",
+            quiz: [
+                { type: "concept", score: 5, q: "當一個分數的分子和分母一樣大時，等於多少？", options: ["0", "1", "10", "不一定"], ans: 1, exp: "分子分母一樣大，代表完整的 1。" },
+                { type: "concept", score: 5, q: "在計算「同分母」的分數加減時，哪一個數字不需要改變？", options: ["分子", "分母", "兩個都要變", "兩個都不變"], ans: 1, exp: "分母代表切成幾等份，加減時等份的大小不會變。" },
+                { type: "concept", score: 5, q: "請問 1 等於下面哪一個分數？", options: ["1/2", "3/4", "7/7", "0/5"], ans: 2, exp: "只要分子和分母一樣大，就等於 1。7/7 就是 1。" },
+                { type: "concept", score: 5, q: "如果要把 1 減去 2/6，我們要把 1 變成哪一個分數比較好算？", options: ["10/10", "6/6", "2/2", "1/6"], ans: 1, exp: "為了讓分母一樣才能相減，要把 1 變成 6/6。" },
+                { type: "concept", score: 5, q: "「五分之三」記作 3/5，其中數字 5 稱為什麼？", options: ["分母", "分子", "商", "餘數"], ans: 0, exp: "在底下的數字是分母，在上面的數字是分子。" },
+                { type: "calc", score: 5, q: "2/7 + 4/7 = ?", options: ["6/14", "6/7", "8/7", "2/7"], ans: 1, exp: "分母 7 不變，分子相加 2+4=6。" },
+                { type: "calc", score: 5, q: "5/9 - 1/9 = ?", options: ["4/9", "6/9", "4/0", "4/18"], ans: 0, exp: "分母 9 不變，分子相減 5-1=4。" },
+                { type: "calc", score: 5, q: "3/8 + 5/8 = ?", options: ["8/16", "8/8 (等於1)", "2/8", "15/8"], ans: 1, exp: "分子 3+5=8，變成 8/8，就是 1。" },
+                { type: "calc", score: 5, q: "1 - 3/5 = ?", options: ["2/5", "4/5", "3/5", "0/5"], ans: 0, exp: "先把 1 變成 5/5，然後 5/5 - 3/5 = 2/5。" },
+                { type: "calc", score: 5, q: "7/10 - 4/10 = ?", options: ["11/10", "3/0", "3/10", "4/10"], ans: 2, exp: "分母 10 不變，分子 7-4=3。" },
+                { type: "calc", score: 5, q: "4/12 + 6/12 = ?", options: ["10/12", "2/12", "10/24", "12/10"], ans: 0, exp: "分母 12 不變，分子 4+6=10。" },
+                { type: "calc", score: 5, q: "1 - 6/6 = ?", options: ["1", "6/6", "0", "1/6"], ans: 2, exp: "1 就是 6/6，全部減掉剩下 0。" },
+                { type: "calc", score: 5, q: "2/4 + 1/4 = ?", options: ["3/8", "1/4", "4/3", "3/4"], ans: 3, exp: "分母 4 不變，分子 2+1=3。" },
+                { type: "calc", score: 5, q: "9/11 - 5/11 = ?", options: ["4/11", "14/11", "4/22", "5/11"], ans: 0, exp: "分母 11 不變，分子 9-5=4。" },
+                { type: "calc", score: 5, q: "1 - 8/15 = ?", options: ["15/15", "8/15", "7/15", "6/15"], ans: 2, exp: "將 1 變成 15/15，15/15 - 8/15 = 7/15。" },
+                { type: "apply", score: 5, q: "一條蛋糕平分成 8 塊。小明吃 3/8 條，小華吃 2/8 條，共吃多少條？", options: ["1/8 條", "5/16 條", "5/8 條", "6/8 條"], ans: 2, exp: "3/8 + 2/8 = 5/8 條。" },
+                { type: "apply", score: 5, q: "接上題，這條蛋糕還剩下多少條？", options: ["3/8 條", "2/8 條", "1/8 條", "4/8 條"], ans: 0, exp: "1 條 = 8/8。8/8 - 5/8 = 3/8 條。" },
+                { type: "apply", score: 5, q: "水壺有 1 公升水，妹妹喝了 4/10 公升，還剩下多少？", options: ["6/10 公升", "4/10 公升", "5/10 公升", "1/10 公升"], ans: 0, exp: "1 = 10/10。10/10 - 4/10 = 6/10 公升。" },
+                { type: "apply", score: 5, q: "買一盒比薩，哥哥吃 3/6 盒，弟弟吃 3/6 盒。請問他們吃了多少？", options: ["6/12盒", "0盒", "1盒", "3/6盒"], ans: 2, exp: "3/6 + 3/6 = 6/6，就是完整的 1 盒。" },
+                { type: "apply", score: 5, q: "彩帶長 1 公尺，做花用 2/5 公尺，包禮物用 1/5 公尺。還剩多少公尺？", options: ["3/5 公尺", "2/5 公尺", "1/5 公尺", "4/5 公尺"], ans: 1, exp: "用掉 3/5，剩下 5/5 - 3/5 = 2/5 公尺。" }
+            ]
+        },
+        "unit2": {
+            title: "🌟 第二單元：除法",
+            subChapters: [
+                { title: "➗ 2-1 二位數除以一位數", youtubeId: "kElV8sd8aGk", content: "<p>從最大的位置開始分：先十位，再個位。例如：84 ÷ 4。</p>" },
+                { title: "🏢 2-2 三位數除以一位數", youtubeId: "OLvAf16xxsU", content: "<p>先分百位，再分十位，最後分個位。別忘了寫直式喔！</p>" },
+                { title: "➕ 2-3 加與除的兩步驟問題", youtubeId: "PU9MRZOtDE0", content: "<p>遇到題目中有加法和除法時，要注意先後順序，有時候括號會幫大忙！</p>" },
+                { title: "➖ 2-4 減與除的兩步驟問題", youtubeId: "NIRwf-Eec8U", content: "<p>先減再除，或是先除再減，一步步解讀題目的意思。</p>" }
+            ],
+            extension: "<h3>💡 舉一反三：餘數的進位與捨去</h3><p>坐車時有餘數要「多一輛車」，剪緞帶有餘數則「不夠剪」，要根據生活情境判斷！</p>",
+            quiz: [
+                { type: "concept", score: 5, q: "除法直式計算時，應該從哪一個位數開始算？", options: ["個位", "十位", "最大位數", "都可以"], ans: 2, exp: "除法要從最大的位數（百位或十位）開始平分。" },
+                { type: "concept", score: 5, q: "如果除法算完，沒有剩下任何東西，這稱為什麼？", options: ["平分", "整除", "驗算", "完結"], ans: 1, exp: "餘數是0的情況，稱為「整除」。" },
+                { type: "concept", score: 5, q: "哪一個是除法正確的驗算公式？", options: ["商 × 被除數 + 餘數", "除數 × 被除數 + 商", "商 × 除數 + 餘數 = 被除數", "被除數 ÷ 商 = 餘數"], ans: 2, exp: "商 × 除數 + 餘數 可以算回被除數。" },
+                { type: "concept", score: 5, q: "餘數跟除數的關係，哪一個正確？", options: ["餘數 > 除數", "餘數 = 除數", "餘數 < 除數", "沒關係"], ans: 2, exp: "餘數一定要比除數小，否則代表還可以繼續分。" },
+                { type: "concept", score: 5, q: "600 ÷ 3 可以想成是把幾個「百」平分成 3 份？", options: ["6個", "60個", "600個", "3個"], ans: 0, exp: "600 就是 6 個百。" },
+                { type: "calc", score: 5, q: "80 ÷ 4 = ?", options: ["2", "20", "200", "40"], ans: 1, exp: "8個十除以4等於2個十，即20。" },
+                { type: "calc", score: 5, q: "96 ÷ 3 = ?", options: ["31", "32", "33", "23"], ans: 1, exp: "先算十位 9÷3=3，再算個位 6÷3=2。" },
+                { type: "calc", score: 5, q: "408 ÷ 4 = ?", options: ["12", "102", "120", "100"], ans: 1, exp: "百位為1，十位0不夠除補0，個位為2，答案102。" },
+                { type: "calc", score: 5, q: "75 ÷ 5 = ?", options: ["13", "14", "15", "16"], ans: 2, exp: "7÷5=1...2，25÷5=5，商是15。" },
+                { type: "calc", score: 5, q: "500 ÷ 2 = ?", options: ["200", "250", "300", "50"], ans: 1, exp: "500平分兩半，一半是250。" },
+                { type: "calc", score: 5, q: "87 ÷ 6 = ?", options: ["14...3", "13...9", "14...2", "15...1"], ans: 0, exp: "商是14，餘數是3。" },
+                { type: "calc", score: 5, q: "639 ÷ 3 = ?", options: ["213", "231", "123", "210"], ans: 0, exp: "百位2，十位1，個位3，答案213。" },
+                { type: "calc", score: 5, q: "90 ÷ 6 = ?", options: ["14", "15", "16", "17"], ans: 1, exp: "9÷6=1...3，30÷6=5，答案15。" },
+                { type: "calc", score: 5, q: "324 ÷ 4 = ?", options: ["80", "81", "82", "71"], ans: 1, exp: "百位不夠除，看前兩位32÷4=8，個位4÷4=1。" },
+                { type: "calc", score: 5, q: "125 ÷ 5 = ?", options: ["20", "22", "24", "25"], ans: 3, exp: "12÷5=2...2，25÷5=5，答案25。" },
+                { type: "apply", score: 5, q: "繩子長 84 公分，平分成 4 段，每段長幾公分？", options: ["20", "21", "22", "24"], ans: 1, exp: "84 ÷ 4 = 21。" },
+                { type: "apply", score: 5, q: "一年 365 天，一星期 7 天。一年有幾星期又幾天？", options: ["51星2天", "52星1天", "50星5天", "52星3天"], ans: 1, exp: "365 ÷ 7 = 52 ... 1。" },
+                { type: "apply", score: 5, q: "帶 500 元買 90 元的筆記本，最多買幾本？剩幾元？", options: ["6本剩40", "5本剩50", "5本剩40", "4本剩140"], ans: 1, exp: "500 ÷ 90 = 5 ... 50。" },
+                { type: "apply", score: 5, q: "104 個學生，每輛小巴士坐 8 人，最少需幾輛？", options: ["12輛", "13輛", "14輛", "15輛"], ans: 1, exp: "104 ÷ 8 = 13。" },
+                { type: "apply", score: 5, q: "某數除以 6，商是 15，餘數是 4，某數是多少？", options: ["90", "94", "86", "100"], ans: 1, exp: "15 × 6 + 4 = 94。" }
+            ]
+        },
+        "unit3": {
+            title: "🌟 第三單元：尋找規律",
+            subChapters: [
+                { title: "🔷 3-1 圖形的規律", youtubeId: "o-EP32twpVU", content: "<p>圖形也會按照順序排隊！觀察形狀、顏色或數量的變化循環。例如：🔴🔵🔴🔵...</p>" },
+                { title: "🔢 3-2 數字的規律", youtubeId: "H0TvX8Yyq9A", content: "<p>觀察數字是怎麼變化的？找到加減或乘除的規則就能預測下一個數字！</p>" },
+                { title: "🧩 3-3 數形規律的應用", youtubeId: "VIJenU86bMs", content: "<p>將圖形與數字的規律，應用在生活實際的挑戰題中。</p>" }
+            ],
+            extension: "<h3>💡 舉一反三：週期規律</h3><p>如果今天是星期一，再過 7 天還是星期一。這就是生活中的「週期規律」！</p>",
+            quiz: [
+                { type: "concept", score: 5, q: "規律：2, 4, 6, 8, (  )。括號中應填？", options: ["9", "10", "12", "14"], ans: 1, exp: "每次加 2，8+2=10。" },
+                { type: "concept", score: 5, q: "規律：⭕❌❌⭕❌❌... 第 8 個圖形是？", options: ["⭕", "❌", "🔺", "不一定"], ans: 1, exp: "三個一組，第7個是⭕，第8個是❌。" },
+                { type: "concept", score: 5, q: "規律：10, 20, 30, (  )。", options: ["35", "40", "45", "50"], ans: 1, exp: "每次加 10。" },
+                { type: "concept", score: 5, q: "規律：🔴🔵🟡🔴🔵🟡... 第10個顏色是？", options: ["🔴", "🔵", "🟡", "🟢"], ans: 0, exp: "三個一組，10÷3=3...1，餘1代表第一種顏色🔴。" },
+                { type: "concept", score: 5, q: "規律：99, 88, 77, (  )。", options: ["60", "66", "55", "70"], ans: 1, exp: "每次減 11。" },
+                { type: "calc", score: 5, q: "數列：100, 95, 90, 85, (  )。", options: ["75", "80", "70", "86"], ans: 1, exp: "每次減 5。" },
+                { type: "calc", score: 5, q: "數列：1, 2, 4, 8, (  )。", options: ["10", "12", "14", "16"], ans: 3, exp: "每次乘 2。" },
+                { type: "calc", score: 5, q: "數列：3, 6, 9, 12, (  )。", options: ["13", "14", "15", "16"], ans: 2, exp: "每次加 3。" },
+                { type: "calc", score: 5, q: "數列：50, 41, 32, 23, (  )。", options: ["13", "14", "15", "16"], ans: 1, exp: "每次減 9。" },
+                { type: "calc", score: 5, q: "數列：1, 10, 100, 1000, (  )。", options: ["2000", "10000", "1001", "1010"], ans: 1, exp: "每次乘 10。" },
+                { type: "calc", score: 5, q: "數列：1, 3, 7, 13, (  )。(這題有挑戰性)", options: ["19", "21", "23", "25"], ans: 1, exp: "分別加2, 4, 6... 下一個加8，13+8=21。" },
+                { type: "calc", score: 5, q: "規律：▲■■▲■■...，第 15 個圖形是？", options: ["▲", "■", "●", "無法計算"], ans: 1, exp: "三個一組，15÷3=5(整除)，代表一組的最後一個■。" },
+                { type: "calc", score: 5, q: "今天是星期三，再過 10 天是星期幾？", options: ["五", "六", "日", "一"], ans: 1, exp: "10÷7=1...3。三往後推3天是星期六。" },
+                { type: "calc", score: 5, q: "今天是星期日，再過 14 天是星期幾？", options: ["六", "日", "一", "二"], ans: 1, exp: "14天剛好是兩週，所以還是星期日。" },
+                { type: "calc", score: 5, q: "數列：10, 12, 15, 19, (  )。", options: ["21", "22", "23", "24"], ans: 3, exp: "分別加2, 3, 4... 下一個加5，19+5=24。" },
+                { type: "apply", score: 5, q: "火柴排正方形：1個用4根，2個連著用7根，3個連著用10根。排4個要幾根？", options: ["11", "12", "13", "14"], ans: 2, exp: "規律是每次加3，10+3=13。" },
+                { type: "apply", score: 5, q: "接上題，排10個要幾根？", options: ["30", "31", "34", "40"], ans: 1, exp: "第1個4根，後面9個各加3根。4 + 9×3 = 31。" },
+                { type: "apply", score: 5, q: "存錢筒第一天存1元，第二天存2元，第三天存3元...第十天存幾元？", options: ["10", "11", "20", "55"], ans: 0, exp: "第幾天就存幾元，所以是10元。" },
+                { type: "apply", score: 5, q: "教室座位每排 6 人，小明是第 20 號，他坐在第幾排？", options: ["3", "4", "5", "6"], ans: 1, exp: "20÷6 = 3...2，前三排坐滿，坐在第四排。" },
+                { type: "apply", score: 5, q: "一串珠子按「紅黃藍綠」排列，第 25 顆是什麼顏色？", options: ["紅", "黃", "藍", "綠"], ans: 0, exp: "四個一組，25÷4=6...1，餘1是紅色。" }
+            ]
+        },
+        "unit4": {
+            title: "🌟 第四單元：公斤和公克",
+            subChapters: [
+                { title: "⚖️ 4-1 認識1公斤秤", youtubeId: "1MVSatg__XQ", content: "<p>學習看1公斤的指針秤，一小格代表多少公克呢？</p>" },
+                { title: "⚖️ 4-2 認識3公斤秤", youtubeId: "bGD6NHHiUjQ", content: "<p>3公斤的秤可以秤更重的東西，但刻度代表的意思會不太一樣喔！</p>" },
+                { title: "💡 4-3 重量的量感與估測", youtubeId: "9c6_121_84g", content: "<p>拿拿看，猜猜看，培養對1公克和1公斤到底有多重的感覺。</p>" },
+                { title: "🔄 4-4 公斤和公克的換算", youtubeId: "mE_QqgJaYKQ", content: "<p>🌟 魔法公式：1 公斤 = 1000 公克。學會如何互相變身！</p>" },
+                { title: "➕ 4-5 重量的加減計算", youtubeId: "rsVgfxAsoJc", content: "<p>公斤跟公斤算，公克跟公克算。超過1000公克記得要進位變成1公斤！</p>" }
+            ],
+            extension: "<h3>💡 舉一反三：淨重與毛重</h3><p>買餅乾時，包裝盒的重量加上餅乾的重量，才是總重量。所以算純餅乾重量(淨重)時，記得要扣掉盒子的重量喔！</p>",
+            quiz: [
+                { type: "concept", score: 5, q: "1 公斤等於幾公克？", options: ["10", "100", "1000", "10000"], ans: 2, exp: "1公斤 = 1000公克。" },
+                { type: "concept", score: 5, q: "量體重的時候，通常會用哪一種單位比較適合？", options: ["公克", "公分", "公斤", "公尺"], ans: 2, exp: "人體比較重，適合用公斤。" },
+                { type: "concept", score: 5, q: "1公克的重量大約和什麼差不多？", options: ["一本書", "一輛車", "一枚一元硬幣", "一顆西瓜"], ans: 2, exp: "一枚一元硬幣大約是1公克。" },
+                { type: "concept", score: 5, q: "在1公斤的秤上，指針指在500的地方，代表多重？", options: ["500公斤", "5公斤", "50公克", "500公克"], ans: 3, exp: "1公斤秤的刻度通常是公克，所以是500公克。" },
+                { type: "concept", score: 5, q: "「kg」是什麼單位的英文縮寫？", options: ["公克", "公斤", "公分", "公尺"], ans: 1, exp: "kg 是公斤，g 是公克。" },
+                { type: "calc", score: 5, q: "3000 公克等於幾公斤？", options: ["3", "30", "300", "0.3"], ans: 0, exp: "1000公克=1公斤，3000公克=3公斤。" },
+                { type: "calc", score: 5, q: "4公斤 50公克 等於幾公克？", options: ["450", "4050", "4500", "4005"], ans: 1, exp: "4公斤=4000公克，加上50=4050公克。" },
+                { type: "calc", score: 5, q: "2公斤 + 3公斤 = ?", options: ["5公克", "5公斤", "50公斤", "500公克"], ans: 1, exp: "2+3=5公斤。" },
+                { type: "calc", score: 5, q: "1500公克 - 500公克 = ?", options: ["1000公克", "1公斤", "以上皆是", "以上皆非"], ans: 2, exp: "剩1000公克，1000公克也就是1公斤。" },
+                { type: "calc", score: 5, q: "7公斤 800公克 = ?", options: ["780公克", "7080公克", "7800公克", "8700公克"], ans: 2, exp: "7000 + 800 = 7800公克。" },
+                { type: "calc", score: 5, q: "9500公克 = ?", options: ["95公斤", "9公斤50公克", "9公斤500公克", "950公斤"], ans: 2, exp: "9000公克是9公斤，剩下500公克。" },
+                { type: "calc", score: 5, q: "2公斤 400公克 + 1公斤 700公克 = ?", options: ["3公斤100公克", "4公斤100公克", "3公斤1100公克", "4公斤"], ans: 1, exp: "公克相加1100(進位1公斤)，公斤相加2+1+1(進位)=4。" },
+                { type: "calc", score: 5, q: "5公斤 - 2公斤 300公克 = ?", options: ["3公斤300公克", "2公斤700公克", "3公斤700公克", "2公斤300公克"], ans: 1, exp: "5公斤變4公斤1000公克，減去2公斤300公克=2公斤700公克。" },
+                { type: "calc", score: 5, q: "半公斤等於幾公克？", options: ["50", "500", "5000", "5"], ans: 1, exp: "1公斤是1000，一半就是500公克。" },
+                { type: "calc", score: 5, q: "10公斤等於幾公克？", options: ["100", "1000", "10000", "100000"], ans: 2, exp: "10個1000就是10000公克。" },
+                { type: "apply", score: 5, q: "西瓜 2公斤500公克，鳳梨 1公斤200公克。共多重？", options: ["3公斤300公克", "3公斤700公克", "4公斤", "1公斤300公克"], ans: 1, exp: "2+1=3公斤，500+200=700公克。" },
+                { type: "apply", score: 5, q: "貓咪重 4公斤，小狗重 3500公克。誰比較重？", options: ["貓咪", "小狗", "一樣重", "無法比較"], ans: 0, exp: "4公斤=4000公克，比3500公克重。" },
+                { type: "apply", score: 5, q: "餅乾連盒子共重 600公克(毛重)，盒子重 50公克。餅乾淨重多少？", options: ["650公克", "550公克", "600公克", "500公克"], ans: 1, exp: "毛重 - 盒子重量 = 淨重。600 - 50 = 550公克。" },
+                { type: "apply", score: 5, q: "媽媽買了3包麵粉，每包重500公克，總共重幾公斤幾公克？", options: ["1公斤500公克", "15公斤", "150公克", "5公斤"], ans: 0, exp: "500×3=1500公克，等於1公斤500公克。" },
+                { type: "apply", score: 5, q: "書包重 3公斤，拿出 800公克的課本後，書包還重多少？", options: ["2公斤200公克", "2公斤800公克", "3公斤800公克", "2公斤"], ans: 0, exp: "3000 - 800 = 2200公克 = 2公斤200公克。" }
+            ]
+        },
+        "unit5": {
+            title: "🌟 第五單元：小數",
+            subChapters: [
+                { title: "📏 5-1 認識一位小數", youtubeId: "pzuqTj5x9gI", content: "<p>把 1 平分成 10 份，其中的 1 份就是 1/10，寫成小數 0.1。</p>" },
+                { title: "🎯 5-2 認識十分位", youtubeId: "8SlQNu0nCWk", content: "<p>小數點後面第一位叫做十分位，代表有幾個 0.1。</p>" },
+                { title: "🔍 5-3 小數的大小比較", youtubeId: "JaS3XcHehu4", content: "<p>先比整數的部分，整數一樣大時，再比十分位。</p>" },
+                { title: "➕ 5-4 小數的加減", youtubeId: "d5sVeKLpYiI", content: "<p>算小數加減法時，最重要的秘訣：小數點一定要對齊！</p>" },
+                { title: "📏 5-5 1毫米＝0.1公分", youtubeId: "UyWpcaPLdZQ", content: "<p>尺上面的1小格(毫米)就是0.1公分，學會將長度跟小數結合。</p>" }
+            ],
+            extension: "<h3>💡 舉一反三：長度與小數</h3><p>尺上面 1 公分中間有 10 小格（毫米）。所以 1 毫米就是 0.1 公分，5 毫米就是 0.5 公分喔！</p>",
+            quiz: [
+                { type: "concept", score: 5, q: "分數的 1/10，寫成小數是多少？", options: ["1.0", "0.1", "0.01", "10"], ans: 1, exp: "把1平分成10份，1份是 0.1。" },
+                { type: "concept", score: 5, q: "「3.5」這個小數讀作什麼？", options: ["三五", "三十五", "三點五", "三百五十"], ans: 2, exp: "小數點讀作「點」。" },
+                { type: "concept", score: 5, q: "小數點右邊第一位稱為什麼位？", options: ["個位", "十位", "十分位", "百分位"], ans: 2, exp: "小數點後第一位是十分位。" },
+                { type: "concept", score: 5, q: "10個0.1合起來是多少？", options: ["0.10", "1", "10", "0.01"], ans: 1, exp: "10個0.1就是整數的1。" },
+                { type: "concept", score: 5, q: "算小數加減法時，直式最重要的是什麼要對齊？", options: ["最右邊數字", "最左邊數字", "小數點", "隨便對齊"], ans: 2, exp: "小數點一定要對齊，相同位值才能相加減。" },
+                { type: "calc", score: 5, q: "0.4 + 0.3 = ?", options: ["0.7", "0.1", "1.7", "7"], ans: 0, exp: "4個0.1加3個0.1等於7個0.1。" },
+                { type: "calc", score: 5, q: "1 - 0.2 = ?", options: ["0.8", "1.2", "0.9", "0"], ans: 0, exp: "把 1 想成 1.0。1.0 - 0.2 = 0.8。" },
+                { type: "calc", score: 5, q: "2.5 + 1.4 = ?", options: ["3.9", "4.0", "3.1", "39"], ans: 0, exp: "整數相加3，小數相加0.9。" },
+                { type: "calc", score: 5, q: "5.8 - 3.2 = ?", options: ["2.6", "1.6", "8.0", "2.4"], ans: 0, exp: "5-3=2，0.8-0.2=0.6。" },
+                { type: "calc", score: 5, q: "0.9 + 0.4 = ?", options: ["0.13", "1.3", "13", "1.4"], ans: 1, exp: "9+4=13個0.1，也就是1.3。" },
+                { type: "calc", score: 5, q: "3 - 1.5 = ?", options: ["2.5", "1.5", "2", "0.5"], ans: 1, exp: "3.0 - 1.5 = 1.5。" },
+                { type: "calc", score: 5, q: "比較大小：4.2 (  ) 3.9", options: [">", "<", "=", "無法比較"], ans: 0, exp: "先比整數，4大於3，所以4.2比較大。" },
+                { type: "calc", score: 5, q: "比較大小：5.6 (  ) 5.8", options: [">", "<", "=", "無法比較"], ans: 1, exp: "整數一樣比十分位，6小於8，所以5.6小於5.8。" },
+                { type: "calc", score: 5, q: "13個0.1是寫成多少？", options: ["0.13", "1.3", "13", "13.1"], ans: 1, exp: "滿10個進位變成1，剩下3個0.1，所以是1.3。" },
+                { type: "calc", score: 5, q: "4.5 是由幾個 0.1 合起來的？", options: ["4", "5", "45", "450"], ans: 2, exp: "4.5 是 45 個 0.1。" },
+                { type: "apply", score: 5, q: "紅緞帶 2.5 公尺，藍緞帶 1.3 公尺。紅比藍長多少？", options: ["3.8", "1.8", "1.2", "0.2"], ans: 2, exp: "2.5 - 1.3 = 1.2。" },
+                { type: "apply", score: 5, q: "1毫米是0.1公分。那 8毫米 是幾公分？", options: ["8公分", "0.8公分", "80公分", "0.08公分"], ans: 1, exp: "8個0.1公分就是0.8公分。" },
+                { type: "apply", score: 5, q: "鉛筆長 12 公分 5 毫米，用小數表示是幾公分？", options: ["125公分", "1.25公分", "12.5公分", "12.05公分"], ans: 2, exp: "5毫米是0.5公分，合起來是12.5公分。" },
+                { type: "apply", score: 5, q: "小華跳遠 1.8 公尺，小明跳 2.1 公尺。誰跳得遠？", options: ["小華", "小明", "一樣遠", "不知道"], ans: 1, exp: "2.1 大於 1.8。" },
+                { type: "apply", score: 5, q: "果汁有 2 公升，喝掉 0.6 公升，還剩幾公升？", options: ["1.4", "2.6", "0.4", "1.6"], ans: 0, exp: "2.0 - 0.6 = 1.4 公升。" }
+            ]
+        },
+        "unit6": {
+            title: "🌟 第六單元：圓",
+            subChapters: [
+                { title: "⭕ 6-1 認識圓", youtubeId: "sfrtQ6EDUKY", content: "<p>認識圓心、半徑與直徑。直徑 = 半徑的 2 倍！</p>" },
+                { title: "✏️ 6-2 使用圓規", youtubeId: "VNZ4PRog5gM", content: "<p>圓規兩腳打開的距離就是半徑，學會用它畫出完美的圓。</p>" }
+            ],
+            extension: "<h3>💡 舉一反三：車輪為什麼是圓的？</h3><p>因為圓形從圓心到邊緣(半徑)的距離都一樣長！這樣車子才會平穩不會上下顛簸。</p>",
+            quiz: [
+                { type: "concept", score: 5, q: "同一個圓裡，直徑是半徑的幾倍？", options: ["1倍", "2倍", "3倍", "一半"], ans: 1, exp: "直徑由兩條半徑連成，所以是 2 倍。" },
+                { type: "concept", score: 5, q: "用圓規畫圓時，針尖刺下去固定的點稱為什麼？", options: ["半徑", "直徑", "圓心", "圓周"], ans: 2, exp: "固定的中心點稱為圓心。" },
+                { type: "concept", score: 5, q: "從圓心到圓周上的任何一條直線稱為什麼？", options: ["半徑", "直徑", "圓心", "圓周"], ans: 0, exp: "從中心出發到邊緣的線是半徑。" },
+                { type: "concept", score: 5, q: "用圓規畫圓時，兩腳打開的距離是圓的什麼？", options: ["直徑", "半徑", "圓周", "面積"], ans: 1, exp: "打開的距離等於畫出來的半徑。" },
+                { type: "concept", score: 5, q: "通過圓心，兩端都在圓周上的直線叫什麼？", options: ["半徑", "直徑", "圓心", "弧線"], ans: 1, exp: "橫跨整個圓且通過圓心的線是直徑。" },
+                { type: "calc", score: 5, q: "圓的半徑 4 公分，直徑多少公分？", options: ["2", "4", "8", "16"], ans: 2, exp: "4 × 2 = 8。" },
+                { type: "calc", score: 5, q: "圓的直徑 10 公分，半徑多少公分？", options: ["5", "10", "20", "100"], ans: 0, exp: "10 ÷ 2 = 5。" },
+                { type: "calc", score: 5, q: "畫直徑 12 公分的圓，圓規兩腳要打開幾公分？", options: ["12", "24", "6", "3"], ans: 2, exp: "打開距離是半徑，12 ÷ 2 = 6。" },
+                { type: "calc", score: 5, q: "半徑 7 公分的圓，直徑比半徑多幾公分？", options: ["7", "14", "21", "0"], ans: 0, exp: "直徑是14，14-7=7。或者想直徑就是多一條半徑長。" },
+                { type: "calc", score: 5, q: "直徑 18 公分，半徑是多少？", options: ["8", "9", "10", "36"], ans: 1, exp: "18 ÷ 2 = 9。" },
+                { type: "calc", score: 5, q: "兩個半徑是 3 公分的圓排在一起，總長度是多少直徑？", options: ["6公分", "12公分", "9公分", "3公分"], ans: 1, exp: "一個圓直徑是6，兩個排一起是12。" },
+                { type: "calc", score: 5, q: "半徑 5 公分的圓，能放進寬度 8 公分的盒子裡嗎？", options: ["能", "不能", "剛剛好", "不一定"], ans: 1, exp: "半徑5，直徑是10。10大於8，所以放不進去。" },
+                { type: "calc", score: 5, q: "半徑 8 公分和直徑 14 公分的圓，哪一個比較大？", options: ["半徑8的", "直徑14的", "一樣大", "無法比較"], ans: 0, exp: "半徑8的直徑是16，16>14，所以比較大。" },
+                { type: "calc", score: 5, q: "用圓規畫圓，畫了3圈，半徑會改變嗎？", options: ["會變大", "會變小", "不會改變", "不一定"], ans: 2, exp: "只要圓規開口沒動，半徑就不會改變。" },
+                { type: "calc", score: 5, q: "一個圓裡面，最長的直線是哪一條？", options: ["半徑", "直徑", "不一定", "以上皆非"], ans: 1, exp: "直徑是圓內最長的直線段。" },
+                { type: "apply", score: 5, q: "腳踏車輪子直徑 60 公分，輻條(中心到外圈的鐵絲)大約多長？", options: ["30公分", "60公分", "120公分", "10公分"], ans: 0, exp: "輻條相當於半徑，60 ÷ 2 = 30。" },
+                { type: "apply", score: 5, q: "想剪一個直徑 20 公分的圓形紙板，正方形色紙邊長至少要多少？", options: ["10公分", "20公分", "40公分", "30公分"], ans: 1, exp: "正方形邊長至少要等於圓的直徑，也就是20公分。" },
+                { type: "apply", score: 5, q: "爸爸用圓規畫半徑 15 公分的披薩，這披薩多寬？", options: ["15公分", "30公分", "45公分", "7.5公分"], ans: 1, exp: "寬度就是直徑，15 × 2 = 30。" },
+                { type: "apply", score: 5, q: "杯口直徑 8 公分，三個杯子緊靠排成一直線，總長多少？", options: ["8", "16", "24", "32"], ans: 2, exp: "8 × 3 = 24公分。" },
+                { type: "apply", score: 5, q: "在同一張紙上，圓心不動，把圓規從 3公分 張開到 5公分 畫兩個圓，這叫什麼？", options: ["同心圓", "相交圓", "半圓", "橢圓"], ans: 0, exp: "圓心相同但半徑不同的圓稱為同心圓。" }
+            ]
+        },
+        "unit7": {
+            title: "🌟 第七單元：乘法與除法",
+            subChapters: [
+                { title: "🔄 7-1 乘與除的關係", youtubeId: "F4jQMU0hB9Q", content: "<p>乘法和除法是好朋友，可以互換來幫忙驗算。</p>" },
+                { title: "🧩 7-2 被乘數或乘數未知的問題", youtubeId: "5gy23Djp2Z8", content: "<p>當不知道前面或後面的乘數時，把除法請出來幫忙找答案！</p>" },
+                { title: "📝 7-3 被除數或除數未知的問題", youtubeId: "qU4DnbTv3lM", content: "<p>如果不知道被除數，就把分出去的乘回來；不知道除數，就把總數去除以商。</p>" }
+            ],
+            extension: "<h3>💡 舉一反三：驗算的秘密</h3><p>為什麼除法算完可以用乘法檢查？因為把它們反過來做，就會回到原點！</p>",
+            quiz: [
+                { type: "concept", score: 5, q: "要算出「( ) × 7 = 42」括號裡的數字，可以怎麼算？", options: ["42 + 7", "42 - 7", "42 × 7", "42 ÷ 7"], ans: 3, exp: "乘法的未知數，用除法找：42 ÷ 7 = 6。" },
+                { type: "concept", score: 5, q: "要算出「( ) ÷ 5 = 8」括號裡的數字，可以怎麼算？", options: ["8 + 5", "8 - 5", "8 × 5", "8 ÷ 5"], ans: 2, exp: "把分出去的收回來(被除數)，用乘法：8 × 5 = 40。" },
+                { type: "concept", score: 5, q: "乘法和哪一種計算是互逆關係(反過來算)？", options: ["加法", "減法", "除法", "沒有"], ans: 2, exp: "乘除互為逆運算。" },
+                { type: "concept", score: 5, q: "知道全部數量和平分的份數，求每份多少，要用什麼計算？", options: ["加法", "減法", "乘法", "除法"], ans: 3, exp: "「平分」要用除法。" },
+                { type: "concept", score: 5, q: "驗算「36 ÷ 4 = 9」正確與否，要用哪個算式？", options: ["9 × 4", "36 × 4", "36 - 9", "4 + 9"], ans: 0, exp: "商 × 除數 = 被除數。" },
+                { type: "calc", score: 5, q: "(  ) × 9 = 81，括號是多少？", options: ["7", "8", "9", "10"], ans: 2, exp: "81 ÷ 9 = 9。" },
+                { type: "calc", score: 5, q: "64 ÷ (  ) = 8，括號是多少？", options: ["6", "7", "8", "9"], ans: 2, exp: "64 ÷ 8 = 8。" },
+                { type: "calc", score: 5, q: "8 × (  ) = 56，括號是多少？", options: ["6", "7", "8", "9"], ans: 1, exp: "56 ÷ 8 = 7。" },
+                { type: "calc", score: 5, q: "(  ) ÷ 7 = 7，括號是多少？", options: ["1", "14", "49", "0"], ans: 2, exp: "7 × 7 = 49。" },
+                { type: "calc", score: 5, q: "(  ) × 5 = 60，括號是多少？", options: ["10", "11", "12", "13"], ans: 2, exp: "60 ÷ 5 = 12。" },
+                { type: "calc", score: 5, q: "72 ÷ (  ) = 9，括號是多少？", options: ["7", "8", "9", "10"], ans: 1, exp: "72 ÷ 9 = 8。" },
+                { type: "calc", score: 5, q: "(  ) ÷ 3 = 15，括號是多少？", options: ["5", "18", "45", "12"], ans: 2, exp: "15 × 3 = 45。" },
+                { type: "calc", score: 5, q: "4 × (  ) = 100，括號是多少？", options: ["20", "25", "30", "400"], ans: 1, exp: "100 ÷ 4 = 25。" },
+                { type: "calc", score: 5, q: "(  ) × 6 = 0，括號是多少？", options: ["6", "1", "0", "10"], ans: 2, exp: "任何數乘0都是0。" },
+                { type: "calc", score: 5, q: "(  ) ÷ 9 = 10 ... 1，括號是多少？", options: ["90", "91", "89", "19"], ans: 1, exp: "10 × 9 + 1 = 91。" },
+                { type: "apply", score: 5, q: "老師買糖果平分給 6 人，每人 5 顆。老師原來買幾顆？", options: ["11", "30", "40", "1"], ans: 1, exp: "( ) ÷ 6 = 5，所以 6 × 5 = 30。" },
+                { type: "apply", score: 5, q: "一盒鉛筆有幾枝不知道，買 4 盒共有 48 枝。一盒有幾枝？", options: ["10", "12", "14", "192"], ans: 1, exp: "( ) × 4 = 48，48 ÷ 4 = 12。" },
+                { type: "apply", score: 5, q: "哥哥有 50 元，買了幾個 8 元的橡皮擦後剩下 2 元？", options: ["4", "5", "6", "7"], ans: 2, exp: "50 - 2 = 48。48 ÷ 8 = 6 個。" },
+                { type: "apply", score: 5, q: "繩子剪去 15 公分後，剩下的平分成 3 段，每段 10 公分。原長多少？", options: ["30", "45", "15", "25"], ans: 1, exp: "剩下的長 10×3=30。30 + 15 = 45公分。" },
+                { type: "apply", score: 5, q: "小華每天存一樣多錢，存一星期(7天)後有 63 元。每天存幾元？", options: ["7", "8", "9", "10"], ans: 2, exp: "( ) × 7 = 63，63 ÷ 7 = 9元。" }
+            ]
+        },
+        "unit8": {
+            title: "🌟 第八單元：時間",
+            subChapters: [
+                { title: "⏱️ 8-1 1日24小時", youtubeId: "3ceh9SkKO_8", content: "<p>了解24小時制，下午1點就是13時！</p>" },
+                { title: "🔄 8-2 時、分和秒", youtubeId: "fSlbom19YGc", content: "<p>1小時=60分，1分=60秒。學會它們之間的魔法換算。</p>" },
+                { title: "⏳ 8-3 時分的加減計算", youtubeId: "aPVeLiYy748", content: "<p>算時間的時候，如果秒數或分數超過 60，就要進位囉！</p>" }
+            ],
+            extension: "<h3>💡 舉一反三：24小時制</h3><p>下午 1 點其實就是 12+1 = 13 點。這樣不管是白天晚上，都不會搞混時間囉！</p>",
+            quiz: [
+                { type: "concept", score: 5, q: "1 分鐘等於幾秒鐘？", options: ["10", "24", "60", "100"], ans: 2, exp: "時鐘秒針走一圈是 60 秒。" },
+                { type: "concept", score: 5, q: "一天總共有幾小時？", options: ["12", "24", "60", "100"], ans: 1, exp: "地球自轉一圈是 24 小時。" },
+                { type: "concept", score: 5, q: "1 小時等於幾分鐘？", options: ["10", "24", "60", "100"], ans: 2, exp: "分針走一圈是 60 分鐘。" },
+                { type: "concept", score: 5, q: "下午 3 點，用 24 小時制表示是幾時？", options: ["3時", "13時", "15時", "23時"], ans: 2, exp: "12 + 3 = 15時。" },
+                { type: "concept", score: 5, q: "「20時」是我們常說的什麼時間？", options: ["早上8點", "晚上8點", "晚上10點", "下午2點"], ans: 1, exp: "20 - 12 = 8，是晚上8點。" },
+                { type: "calc", score: 5, q: "120 秒等於幾分鐘？", options: ["1", "2", "3", "4"], ans: 1, exp: "120 ÷ 60 = 2。" },
+                { type: "calc", score: 5, q: "1小時 15分 = 幾分？", options: ["115", "16", "75", "60"], ans: 2, exp: "60 + 15 = 75分。" },
+                { type: "calc", score: 5, q: "2分 30秒 = 幾秒？", options: ["230", "150", "90", "120"], ans: 1, exp: "2分是120秒，120+30=150秒。" },
+                { type: "calc", score: 5, q: "90 分鐘 = 幾小時幾分？", options: ["9小時0分", "1小時30分", "2小時", "1小時50分"], ans: 1, exp: "90 - 60 = 30，所以是1小時30分。" },
+                { type: "calc", score: 5, q: "100 秒 = 幾分幾秒？", options: ["1分0秒", "1分40秒", "10分0秒", "2分"], ans: 1, exp: "100 - 60 = 40，所以是1分40秒。" },
+                { type: "calc", score: 5, q: "25分 + 40分 = 幾時幾分？", options: ["65分", "1時5分", "1時15分", "2時"], ans: 1, exp: "65分 = 1時5分。" },
+                { type: "calc", score: 5, q: "1時 20分 - 50分 = ?", options: ["30分", "1時30分", "40分", "70分"], ans: 0, exp: "換成80分，80 - 50 = 30分。" },
+                { type: "calc", score: 5, q: "上午 10:00 到 下午 2:00，經過幾小時？", options: ["4", "8", "12", "2"], ans: 0, exp: "下午2點=14時。14 - 10 = 4小時。" },
+                { type: "calc", score: 5, q: "現在是 9:50，再過 20 分鐘是幾點？", options: ["9:70", "10:10", "10:00", "10:20"], ans: 1, exp: "50+20=70分，進位1小時剩10分，變成10:10。" },
+                { type: "calc", score: 5, q: "半小時等於幾分鐘？", options: ["15", "30", "50", "60"], ans: 1, exp: "60 ÷ 2 = 30分。" },
+                { type: "apply", score: 5, q: "卡通從 16:00 播到 16:30，播了多久？", options: ["30秒", "30分鐘", "1小時", "4小時"], ans: 1, exp: "4時30分 - 4時 = 30分鐘。" },
+                { type: "apply", score: 5, q: "跑100公尺，小明花 18秒，小華花 20秒。誰跑得快？", options: ["小明", "小華", "一樣快", "無法比較"], ans: 0, exp: "時間越短代表速度越快。" },
+                { type: "apply", score: 5, q: "烤蛋糕要 45 分鐘，下午 2:00 放進烤箱，幾點會烤好？", options: ["2:45", "3:00", "3:45", "2:30"], ans: 0, exp: "2時 + 45分 = 2時45分。" },
+                { type: "apply", score: 5, q: "一節課 40 分鐘，下課 10 分鐘。上完一節課和下課共花幾分鐘？", options: ["30", "40", "50", "60"], ans: 2, exp: "40 + 10 = 50 分鐘。" },
+                { type: "apply", score: 5, q: "接上題，50 分鐘離 1 小時還差幾分鐘？", options: ["10", "20", "50", "0"], ans: 0, exp: "1小時=60分，60 - 50 = 10分鐘。" }
+            ]
+        },
+        "unit9": {
+            title: "🌟 第九單元：統計表",
+            subChapters: [
+                { title: "📊 9-1 報讀一維表格", youtubeId: "-fKNSY-HkW4", content: "<p>一維表格只有一個方向的分類，學會看懂表格說的故事。</p>" },
+                { title: "📈 9-2 報讀二維表格", youtubeId: "Rkg24WxN3hQ", content: "<p>看二維表格時，要對準「橫向」和「直向」的交會處！</p>" },
+                { title: "📝 9-3 製作統計表及應用", youtubeId: "qrdMiudqVJk", content: "<p>把雜亂的資料用「正」字畫記，然後整理成清楚的表格。</p>" }
+            ],
+            extension: "<h3>💡 舉一反三：為什麼要用圖表？</h3><p>大腦看圖形的速度比看文字快很多。當你看功課表時，一秒鐘就能找到星期三第三節是什麼課！</p>",
+            quiz: [
+                { type: "concept", score: 5, q: "畫滿一個「正」字代表數量是多少？", options: ["1", "3", "4", "5"], ans: 3, exp: "「正」有五劃，代表 5 個。" },
+                { type: "concept", score: 5, q: "找「車次」和「車站」交接的地方，這叫什麼表格？", options: ["一維表格", "二維表格", "圓餅圖", "長條圖"], ans: 1, exp: "有直向跟橫向條件交會的，叫做二維表格。" },
+                { type: "concept", score: 5, q: "功課表屬於哪一種表格？", options: ["一維表格", "二維表格", "畫記表", "以上皆非"], ans: 1, exp: "功課表有「星期」跟「節次」兩個維度。" },
+                { type: "concept", score: 5, q: "用「正」字畫記有什麼好處？", options: ["字好看", "節省紙張", "五個一數很方便", "老師規定的"], ans: 2, exp: "五個一數在統計大量數據時最快最不容易出錯。" },
+                { type: "concept", score: 5, q: "如果在表格上看到「合計」或「總計」，代表什麼意思？", options: ["把全部數字加起來", "最大的數字", "最小的數字", "平均數字"], ans: 0, exp: "合計就是總和的意思。" },
+                { type: "calc", score: 5, q: "得票數是兩個「正」字又 2 畫，共得幾票？", options: ["7", "10", "12", "22"], ans: 2, exp: "5+5+2 = 12 票。" },
+                { type: "calc", score: 5, q: "得票數是 18 票，要畫幾個完整的「正」字？", options: ["1", "2", "3", "4"], ans: 2, exp: "18 ÷ 5 = 3...3。畫3個完整的正字，還剩下3畫。" },
+                { type: "calc", score: 5, q: "男生15人，女生14人，合計是多少人？", options: ["1", "29", "15", "14"], ans: 1, exp: "15 + 14 = 29。" },
+                { type: "calc", score: 5, q: "四個「正」字代表多少？", options: ["4", "16", "20", "24"], ans: 2, exp: "4 × 5 = 20。" },
+                { type: "calc", score: 5, q: "小明想畫記 8 台車子，他畫完一個「正」字後，還要補幾畫？", options: ["1", "2", "3", "4"], ans: 2, exp: "8 - 5 = 3。" },
+                { type: "calc", score: 5, q: "蘋果有 5 顆，香蕉有 3 顆，橘子有 4 顆。水果「合計」有幾顆？", options: ["8", "9", "12", "15"], ans: 2, exp: "5 + 3 + 4 = 12。" },
+                { type: "calc", score: 5, q: "甲班 25 人，乙班 26 人，丙班 24 人。三班共幾人？", options: ["70", "75", "80", "65"], ans: 1, exp: "25 + 26 + 24 = 75。" },
+                { type: "calc", score: 5, q: "票數畫了 ⭕⭕⭕⭕⭕⭕，這代表幾票？", options: ["5", "6", "1", "10"], ans: 1, exp: "六個圈圈代表 6 票。" },
+                { type: "calc", score: 5, q: "有一欄數據是 5, 10, 15, 這欄的總計是？", options: ["20", "25", "30", "35"], ans: 2, exp: "5 + 10 + 15 = 30。" },
+                { type: "calc", score: 5, q: "五個完整的正字再加上一畫，是多少？", options: ["21", "25", "26", "31"], ans: 2, exp: "5×5 + 1 = 26。" },
+                { type: "apply", score: 5, q: "功課表上，橫向「星期二」，直向「第二節」，交會處寫「體育」代表？", options: ["體育課一週兩節", "週二第二節是體育", "體育老師週二來", "排在第二天"], ans: 1, exp: "交會點代表該時段的課程。" },
+                { type: "apply", score: 5, q: "火車時刻表上，台北站開車 10:00，台中站到達 12:00。車程多久？", options: ["1小時", "2小時", "3小時", "12小時"], ans: 1, exp: "12 - 10 = 2小時。" },
+                { type: "apply", score: 5, q: "看票價表，全票 100元，半票 50元。爸爸帶一個小孩要付多少錢？", options: ["100", "150", "200", "50"], ans: 1, exp: "100 + 50 = 150元。" },
+                { type: "apply", score: 5, q: "統計水果，蘋果3票，香蕉多蘋果2票，香蕉有幾票？", options: ["2", "3", "5", "6"], ans: 2, exp: "3 + 2 = 5 票。" },
+                { type: "apply", score: 5, q: "班上有 30 人，選班長時小明得 12 票，小華得 10 票，剩下是廢票。廢票幾張？", options: ["22", "12", "10", "8"], ans: 3, exp: "30 - 12 - 10 = 8 張廢票。" }
+            ]
+        }
+    }
+};
+
+let currentQuizData = [];
+let currentUnitKey = "";
+let currentMistakes = [];
+
+// 洗牌演算法 (Fisher-Yates Shuffle)
+function shuffleArray(arr) {
+    for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+}
+
+// 動態載入課程與測驗
+function loadCourse() {
+    const grade = document.getElementById('grade-selector').value;
+    const unit = document.getElementById('unit-selector').value;
+    currentUnitKey = grade + "_" + unit; 
+    const data = curriculumData[grade][unit];
+    
+    document.getElementById('lesson-title').innerText = data.title;
+    
+    const chaptersContainer = document.getElementById('chapters-container');
+    chaptersContainer.innerHTML = ''; 
+    
+    data.subChapters.forEach(chapter => {
+        let chapterHtml = `
+            <div class="card chapter-card">
+                <h3 class="chapter-title">${chapter.title}</h3>
+        `;
+        if(chapter.youtubeId) {
+            chapterHtml += `
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/${chapter.youtubeId}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            `;
+        }
+        chapterHtml += `<div class="chapter-text">${chapter.content}</div></div>`;
+        chaptersContainer.innerHTML += chapterHtml;
+    });
+
+    document.getElementById('lesson-extension').innerHTML = data.extension;
+    
+    randomizeQuiz();
+    renderMistakes();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// 隨機出題功能
+function randomizeQuiz() {
+    const grade = document.getElementById('grade-selector').value;
+    const unit = document.getElementById('unit-selector').value;
+    const rawQuiz = curriculumData[grade][unit].quiz;
+    
+    let shuffledQuiz = shuffleArray(JSON.parse(JSON.stringify(rawQuiz)));
+    
+    shuffledQuiz.forEach(q => {
+        let optionsWithIndex = q.options.map((opt, i) => ({ text: opt, isCorrect: i === q.ans }));
+        shuffleArray(optionsWithIndex);
+        q.options = optionsWithIndex.map(o => o.text);
+        q.ans = optionsWithIndex.findIndex(o => o.isCorrect); 
+    });
+
+    currentQuizData = shuffledQuiz.slice(0, 20); 
+    renderQuizArea();
+}
+
+// 渲染測驗區塊
+function renderQuizArea() {
+    const quizContainer = document.getElementById('quiz-container');
+    quizContainer.innerHTML = ''; 
+    document.getElementById('quiz-result').style.display = 'none';
+    
+    let dynamicTotal = currentQuizData.reduce((sum, q) => sum + q.score, 0);
+    document.getElementById('quiz-title').innerText = `🏆 破關測驗 (共 ${currentQuizData.length} 題，滿分 ${dynamicTotal} 分)`;
+
+    currentQuizData.forEach((q, index) => {
+        let typeLabel = q.type === 'concept' ? '🧠 【觀念題】' : (q.type === 'calc' ? '✍️ 【計算題】' : '🌟 【應用題】');
+        
+        let html = `<div class="question-block" id="q-block-${index}">
+            <div class="question-title">${index + 1}. ${typeLabel} ${q.q} (${q.score}分)</div>
+            <div class="options">`;
+            
+        q.options.forEach((opt, optIndex) => {
+            html += `<label><input type="radio" name="q${index}" id="q${index}_opt${optIndex}" value="${optIndex}"><label for="q${index}_opt${optIndex}"> ${opt}</label></label>`;
+        });
+        
+        html += `</div><div id="exp-${index}" class="explanation" style="display:none;"></div></div>`;
+        quizContainer.innerHTML += html;
+    });
+}
+
+// 批改測驗邏輯
+function submitQuiz() {
+    let totalScore = 0;
+    let wrongCount = 0;
+    let maxScore = currentQuizData.reduce((sum, q) => sum + q.score, 0);
+    
+    currentQuizData.forEach((q, index) => {
+        const selected = document.querySelector(`input[name="q${index}"]:checked`);
+        const expDiv = document.getElementById(`exp-${index}`);
+        const qBlock = document.getElementById(`q-block-${index}`);
+        
+        if (selected && parseInt(selected.value) === q.ans) {
+            totalScore += q.score;
+            expDiv.style.display = 'none';
+            qBlock.style.borderLeft = "8px solid var(--secondary-color)";
+            removeMistake(currentUnitKey, q.q);
+        } else {
+            wrongCount++;
+            expDiv.style.display = 'block';
+            let userAnsText = selected ? q.options[parseInt(selected.value)] : "忘記作答囉！";
+            expDiv.innerHTML = `❌ <strong>答錯了。</strong> (你的答案：${userAnsText})<br><strong>💡 老師講解：</strong>${q.exp}`;
+            qBlock.style.borderLeft = "8px solid var(--error-color)";
+            saveMistake(currentUnitKey, q);
+        }
+    });
+    
+    const resultBox = document.getElementById('quiz-result');
+    resultBox.style.display = 'block';
+    
+    let passScore = maxScore * 0.8;
+    let encourageMsg = totalScore >= passScore ? "太棒了！你是數學小天才！ 🎉" : "沒關係，看一看紅色的老師講解，下次一定會更好！ 💪";
+    
+    resultBox.innerHTML = `<h3>🎯 闖關完成！</h3>
+        <p style="font-size: 1.2rem;">你的總分是：<strong style="font-size: 2.5rem; color: ${totalScore >= passScore ? 'var(--secondary-color)' : 'var(--error-color)'}">${totalScore}</strong> / ${maxScore} 分</p>
+        <p>${encourageMsg}</p>
+        <p>答錯題數：<strong>${wrongCount}</strong> 題 (答錯的題目已經自動加入下方的錯題本囉)</p>`;
+        
+    window.scrollTo({ top: resultBox.offsetTop - 50, behavior: 'smooth' });
+    renderMistakes();
+}
+
+// ================= 錯題本系統 (LocalStorage) =================
+
+function saveMistake(unitKey, questionObj) {
+    let mistakesMap = JSON.parse(localStorage.getItem('mathMistakes')) || {};
+    if (!mistakesMap[unitKey]) mistakesMap[unitKey] = [];
+    
+    let exists = mistakesMap[unitKey].find(q => q.q === questionObj.q);
+    if (!exists) {
+        mistakesMap[unitKey].push(questionObj);
+        localStorage.setItem('mathMistakes', JSON.stringify(mistakesMap));
+    }
+}
+
+function removeMistake(unitKey, questionText) {
+    let mistakesMap = JSON.parse(localStorage.getItem('mathMistakes')) || {};
+    if (mistakesMap[unitKey]) {
+        mistakesMap[unitKey] = mistakesMap[unitKey].filter(q => q.q !== questionText);
+        localStorage.setItem('mathMistakes', JSON.stringify(mistakesMap));
+    }
+}
+
+function renderMistakes() {
+    let mistakesMap = JSON.parse(localStorage.getItem('mathMistakes')) || {};
+    currentMistakes = mistakesMap[currentUnitKey] || [];
+    
+    const mistakeSection = document.getElementById('mistakes-section');
+    const mistakeContainer = document.getElementById('mistakes-container');
+    
+    if (currentMistakes.length === 0) {
+        mistakeSection.style.display = 'none'; 
+        return;
+    }
+    
+    mistakeSection.style.display = 'block';
+    mistakeContainer.innerHTML = '';
+    
+    currentMistakes.forEach(q => {
+        let optionsWithIndex = q.options.map((opt, i) => ({ text: opt, isCorrect: i === q.ans }));
+        shuffleArray(optionsWithIndex);
+        q.options = optionsWithIndex.map(o => o.text);
+        q.ans = optionsWithIndex.findIndex(o => o.isCorrect);
+    });
+
+    currentMistakes.forEach((q, index) => {
+        let html = `<div class="question-block" id="mistake-block-${index}" style="border: 2px solid #FFCC80;">
+            <div class="question-title">⚠️ 挑戰題：${q.q}</div>
+            <div class="options">`;
+            
+        q.options.forEach((opt, optIndex) => {
+            html += `<label><input type="radio" name="mistake_q${index}" id="mistake_q${index}_opt${optIndex}" value="${optIndex}"><label for="mistake_q${index}_opt${optIndex}"> ${opt}</label></label>`;
+        });
+        
+        html += `</div>
+            <button class="check-mistake-btn" onclick="checkMistake(${index})">送出答案，消滅錯題！</button>
+            <div id="mistake-exp-${index}" class="explanation" style="display:none;"></div>
+        </div>`;
+        mistakeContainer.innerHTML += html;
+    });
+}
+
+function checkMistake(index) {
+    const selected = document.querySelector(`input[name="mistake_q${index}"]:checked`);
+    const expDiv = document.getElementById(`mistake-exp-${index}`);
+    const qObj = currentMistakes[index];
+
+    if (!selected) {
+        alert("請先選擇一個答案喔！");
+        return;
+    }
+
+    if (parseInt(selected.value) === qObj.ans) {
+        removeMistake(currentUnitKey, qObj.q);
+        alert("🎉 太棒了！你挑戰成功，這題已經從錯題本中消滅囉！");
+        renderMistakes(); 
+    } else {
+        expDiv.style.display = 'block';
+        let userAnsText = qObj.options[parseInt(selected.value)];
+        expDiv.innerHTML = `❌ <strong>還是不對喔。</strong> (你的答案：${userAnsText})<br><strong>💡 老師講解：</strong>${qObj.exp}`;
+    }
+}
+
+window.onload = loadCourse;
