@@ -1,6 +1,6 @@
 const curriculumData = {
     "grade3_sem2": {
-        // ================= 第一單元：分數的加減 (完整 50 題示範) =================
+        // ================= 第一單元：分數的加減 =================
         "unit1": {
             title: "🌟 第一單元：分數的加減",
             subChapters: [
@@ -11,7 +11,7 @@ const curriculumData = {
             ],
             extension: "<h3>💡 舉一反三：生活中的分數魔法</h3><p>遇到完整的「1」時，隨時把它變身成需要的分母，是解決分數問題的最強武器！</p>",
             quiz: [
-                // 第一組 (1-10)
+                // 第一組
                 { type: "concept", score: 10, q: "當一個分數的分子和分母一樣大時，等於多少？", options: ["0", "1", "10", "不一定"], ans: 1, exp: "分子分母一樣大，代表完整的 1。" },
                 { type: "concept", score: 10, q: "在計算「同分母」的分數加減時，哪一個數字不需要改變？", options: ["分子", "分母", "都要變", "都不變"], ans: 1, exp: "分母代表切成幾等份，加減時等份的大小不會變。" },
                 { type: "calc", score: 10, q: "3/8 + 2/8 = ?", options: ["5/16", "5/8", "6/8", "1/8"], ans: 1, exp: "分母 8 不變，分子相加 3+2=5。" },
@@ -22,7 +22,7 @@ const curriculumData = {
                 { type: "calc", score: 10, q: "5/9 - 1/9 = ?", options: ["4/9", "6/9", "4/0", "4/18"], ans: 0, exp: "分母 9 不變，分子相減 5-1=4。" },
                 { type: "apply", score: 10, q: "一條蛋糕平分成 8 塊。小明吃 3/8 條，小華吃 2/8 條，共吃多少條？", options: ["1/8 條", "5/16 條", "5/8 條", "6/8 條"], ans: 2, exp: "3/8 + 2/8 = 5/8 條。" },
                 { type: "apply", score: 10, q: "接上題，這條蛋糕還剩下多少條？", options: ["3/8 條", "2/8 條", "1/8 條", "4/8 條"], ans: 0, exp: "1 條 = 8/8。8/8 - 5/8 = 3/8 條。" },
-                // 第二組 (11-20)
+                // 第二組
                 { type: "concept", score: 10, q: "如果要把 1 減去 2/6，我們要把 1 變成哪一個分數比較好算？", options: ["10/10", "6/6", "2/2", "1/6"], ans: 1, exp: "為了讓分母一樣才能相減，要把 1 變成 6/6。" },
                 { type: "calc", score: 10, q: "3/8 + 5/8 = ?", options: ["8/16", "8/8 (等於1)", "2/8", "15/8"], ans: 1, exp: "分子 3+5=8，變成 8/8，就是 1。" },
                 { type: "calc", score: 10, q: "1 - 3/5 = ?", options: ["2/5", "4/5", "3/5", "0/5"], ans: 0, exp: "先把 1 變成 5/5，然後 5/5 - 3/5 = 2/5。" },
@@ -33,7 +33,7 @@ const curriculumData = {
                 { type: "calc", score: 10, q: "1 - 6/6 = ?", options: ["1", "6/6", "0", "1/6"], ans: 2, exp: "1 就是 6/6，全部減掉剩下 0。" },
                 { type: "apply", score: 10, q: "買一盒比薩，哥哥吃 3/6 盒，弟弟吃 3/6 盒。請問他們吃了多少？", options: ["6/12盒", "0盒", "1盒", "3/6盒"], ans: 2, exp: "3/6 + 3/6 = 6/6，就是完整的 1 盒。" },
                 { type: "apply", score: 10, q: "彩帶長 1 公尺，做花用 2/5 公尺，包禮物用 1/5 公尺。還剩多少公尺？", options: ["3/5 公尺", "2/5 公尺", "1/5 公尺", "4/5 公尺"], ans: 1, exp: "用掉 3/5，剩下 5/5 - 3/5 = 2/5 公尺。" },
-                // 第三組 (21-30)
+                // 第三組
                 { type: "calc", score: 10, q: "2/4 + 1/4 = ?", options: ["3/8", "1/4", "4/3", "3/4"], ans: 3, exp: "分母 4 不變，分子 2+1=3。" },
                 { type: "calc", score: 10, q: "9/11 - 5/11 = ?", options: ["4/11", "14/11", "4/22", "5/11"], ans: 0, exp: "分母 11 不變，分子 9-5=4。" },
                 { type: "calc", score: 10, q: "1 - 8/15 = ?", options: ["15/15", "8/15", "7/15", "6/15"], ans: 2, exp: "將 1 變成 15/15，15/15 - 8/15 = 7/15。" },
@@ -44,7 +44,7 @@ const curriculumData = {
                 { type: "calc", score: 10, q: "5/12 + 7/12 = ?", options: ["12/24", "2/12", "1", "12/10"], ans: 2, exp: "5+7=12，12/12 就是 1。" },
                 { type: "apply", score: 10, q: "一包糖果有 20 顆。小明拿了這包的 5/20，小華拿了 8/20，誰拿得比較多？", options: ["小明", "小華", "一樣多", "無法比較"], ans: 1, exp: "分母相同比分子，8 大於 5，所以小華拿得多。" },
                 { type: "apply", score: 10, q: "一盒雞蛋有 10 顆。打破了 2/10 盒，還剩下幾分之幾盒是完好的？", options: ["8/10 盒", "2/10 盒", "10/10 盒", "12/10 盒"], ans: 0, exp: "1 盒是 10/10，10/10 - 2/10 = 8/10 盒。" },
-                // 第四組 (31-40)
+                // 第四組
                 { type: "concept", score: 10, q: "「十分之七」的分數寫法是什麼？", options: ["10/7", "7/10", "17", "70"], ans: 1, exp: "分母在下，分子在上，寫作 7/10。" },
                 { type: "concept", score: 10, q: "一個披薩平分成 6 片，吃了 6 片，就是吃了多少個披薩？", options: ["6/1 個", "1 個", "0 個", "1/6 個"], ans: 1, exp: "6/6 個就是完整的 1 個。" },
                 { type: "calc", score: 10, q: "1 - 1/8 = ?", options: ["7/8", "1/8", "8/8", "0/8"], ans: 0, exp: "1 是 8/8，8/8 - 1/8 = 7/8。" },
@@ -55,7 +55,7 @@ const curriculumData = {
                 { type: "calc", score: 10, q: "1/6 + 5/6 = ?", options: ["6/12", "4/6", "1", "6/0"], ans: 2, exp: "1+5=6，6/6 就是 1。" },
                 { type: "apply", score: 10, q: "一箱蘋果有 24 顆。賣出 13/24 箱，還剩下幾分之幾箱？", options: ["11/24 箱", "13/24 箱", "24/24 箱", "10/24 箱"], ans: 0, exp: "1 箱是 24/24，24/24 - 13/24 = 11/24 箱。" },
                 { type: "apply", score: 10, q: "一塊農地，種高麗菜用去 4/9，種青蔥用去 2/9。種這兩種菜共用去農地的多少？", options: ["2/9", "6/9", "6/18", "8/9"], ans: 1, exp: "4/9 + 2/9 = 6/9。" },
-                // 第五組 (41-50)
+                // 第五組
                 { type: "concept", score: 10, q: "分數 8/8 的意思是把一個東西平分成幾份，然後拿走幾份？", options: ["平分8份拿1份", "平分1份拿8份", "平分8份拿8份", "沒平分拿8份"], ans: 2, exp: "分母代表平分的份數，分子代表拿走的份數。" },
                 { type: "calc", score: 10, q: "1 - 5/11 = ?", options: ["6/11", "5/11", "11/11", "16/11"], ans: 0, exp: "1 是 11/11，11/11 - 5/11 = 6/11。" },
                 { type: "calc", score: 10, q: "7/16 + 5/16 = ?", options: ["12/32", "2/16", "12/16", "1"], ans: 2, exp: "分母不變，分子相加 7+5=12。" },
@@ -68,7 +68,7 @@ const curriculumData = {
                 { type: "apply", score: 10, q: "一瓶果汁，哥哥喝了 3/10 瓶，弟弟喝了 2/10 瓶，妹妹把剩下的全喝完。妹妹喝了多少瓶？", options: ["5/10 瓶", "1 瓶", "2/10 瓶", "3/10 瓶"], ans: 0, exp: "先算哥哥弟弟共喝 5/10。剩下 1 - 5/10 = 5/10 瓶。" }
             ]
         },
-        // ================= 其他單元 (目前示範20題，你可以自行擴充到50題) =================
+        // ================= 其他單元保留 20 題示範 =================
         "unit2": {
             title: "🌟 第二單元：除法",
             subChapters: [
@@ -104,7 +104,7 @@ const curriculumData = {
         "unit3": {
             title: "🌟 第三單元：尋找規律",
             subChapters: [
-                { title: "🔷 3-1 圖形的規律", youtubeId: "o-EP32twpVU", content: "<p>圖形也會按照順序排隊！觀察形狀、顏色或數量的變化循環。例如：🔴🔵🔴🔵...</p>" },
+                { title: "🔷 3-1 圖形的規律", youtubeId: "o-EP32twpVU", content: "<p>圖形也會按照順序排隊！觀察形狀、顏色或數量的變化循環。</p>" },
                 { title: "🔢 3-2 數字的規律", youtubeId: "H0TvX8Yyq9A", content: "<p>觀察數字是怎麼變化的？找到加減或乘除的規則就能預測下一個數字！</p>" },
                 { title: "🧩 3-3 數形規律的應用", youtubeId: "VIJenU86bMs", content: "<p>將圖形與數字的規律，應用在生活實際的挑戰題中。</p>" }
             ],
@@ -293,7 +293,7 @@ const curriculumData = {
         "unit9": {
             title: "🌟 第九單元：統計表",
             subChapters: [
-                { title: "📊 9-1 報讀一維表格", youtubeId: "-fKNSY-HkW4", content: "<p>一維表格只有一個方向的分類，學會看懂表格說的故事。</p>" },
+                { title: "📊 9-1 報讀一維表格", youtubeId: "qUthCqACh9I", content: "<p>一維表格只有一個方向的分類，學會看懂表格說的故事。</p>" },
                 { title: "📈 9-2 報讀二維表格", youtubeId: "Rkg24WxN3hQ", content: "<p>看二維表格時，要對準「橫向」和「直向」的交會處！</p>" },
                 { title: "📝 9-3 製作統計表及應用", youtubeId: "qrdMiudqVJk", content: "<p>把雜亂的資料用「正」字畫記，然後整理成清楚的表格。</p>" }
             ],
@@ -326,10 +326,9 @@ const curriculumData = {
 
 let currentQuizData = [];
 let currentUnitKey = "";
-let currentMistakes = [];
-let unitProgress = {}; // 記錄每個單元目前玩到第幾組 { "unit1": 1, "unit2": 3 ... }
+let unitProgress = {};
 
-// 洗牌演算法 (Fisher-Yates Shuffle)
+// 洗牌演算法
 function shuffleArray(arr) {
     for (let i = arr.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -338,7 +337,24 @@ function shuffleArray(arr) {
     return arr;
 }
 
-// 動態載入課程與測驗
+// 語音朗讀功能 (TTS)
+function speakQuestion(questionText, optionsArray) {
+    if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel(); // 停止目前聲音避免重疊
+        let textToRead = questionText + "。選項有：";
+        optionsArray.forEach((opt, index) => {
+            textToRead += `第${index + 1}個，${opt}。`;
+        });
+        const utterance = new SpeechSynthesisUtterance(textToRead);
+        utterance.lang = 'zh-TW';
+        utterance.rate = 0.9;
+        window.speechSynthesis.speak(utterance);
+    } else {
+        alert("很抱歉，您的瀏覽器不支援語音朗讀功能喔！");
+    }
+}
+
+// 載入課程
 function loadCourse() {
     const grade = document.getElementById('grade-selector').value;
     const unit = document.getElementById('unit-selector').value;
@@ -347,21 +363,12 @@ function loadCourse() {
     
     document.getElementById('lesson-title').innerText = data.title;
     
-    // 渲染子章節與 YouTube 影片
     const chaptersContainer = document.getElementById('chapters-container');
     chaptersContainer.innerHTML = ''; 
-    
     data.subChapters.forEach(chapter => {
-        let chapterHtml = `
-            <div class="card chapter-card">
-                <h3 class="chapter-title">${chapter.title}</h3>
-        `;
+        let chapterHtml = `<div class="card chapter-card"><h3 class="chapter-title">${chapter.title}</h3>`;
         if(chapter.youtubeId) {
-            chapterHtml += `
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/${chapter.youtubeId}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-            `;
+            chapterHtml += `<div class="video-container"><iframe src="https://www.youtube.com/embed/${chapter.youtubeId}" allowfullscreen></iframe></div>`;
         }
         chapterHtml += `<div class="chapter-text">${chapter.content}</div></div>`;
         chaptersContainer.innerHTML += chapterHtml;
@@ -369,18 +376,14 @@ function loadCourse() {
 
     document.getElementById('lesson-extension').innerHTML = data.extension;
     
-    // 檢查該單元是否有進度紀錄，沒有則從第一組開始
-    if (!unitProgress[currentUnitKey]) {
-        unitProgress[currentUnitKey] = 1;
-    }
+    if (!unitProgress[currentUnitKey]) unitProgress[currentUnitKey] = 1;
     
-    // 準備考題並渲染
     loadQuizGroup();
     renderMistakes();
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// 根據目前組別切分出 10 題
+// 切分出 10 題
 function loadQuizGroup() {
     const grade = document.getElementById('grade-selector').value;
     const unit = document.getElementById('unit-selector').value;
@@ -389,11 +392,10 @@ function loadQuizGroup() {
     let currentGroup = unitProgress[currentUnitKey];
     document.getElementById('group-indicator').innerText = `目前進度：第 ${currentGroup} 組`;
     
-    // 計算要切出的題目範圍 (例如第一組是 0~9, 第二組是 10~19)
     let startIndex = (currentGroup - 1) * 10;
     let endIndex = startIndex + 10;
     
-    // 如果題庫不夠切出下一組（例如只有20題，卻要玩第3組），就自動循環回第一組
+    // 題庫循環防呆
     if (startIndex >= rawQuiz.length) {
         currentGroup = 1;
         unitProgress[currentUnitKey] = 1;
@@ -402,11 +404,9 @@ function loadQuizGroup() {
         document.getElementById('group-indicator').innerText = `目前進度：第 1 組 (循環開始)`;
     }
 
-    // 取出對應的 10 題
     let groupQuiz = rawQuiz.slice(startIndex, endIndex);
-    
-    // 深拷貝並打亂這 10 題的選項
     let shuffledQuiz = JSON.parse(JSON.stringify(groupQuiz));
+    
     shuffledQuiz.forEach(q => {
         let optionsWithIndex = q.options.map((opt, i) => ({ text: opt, isCorrect: i === q.ans }));
         shuffleArray(optionsWithIndex);
@@ -418,14 +418,13 @@ function loadQuizGroup() {
     renderQuizArea();
 }
 
-// 按下「下一組題目」按鈕
-function nextQuizGroup() {
-    // 將該單元的進度加 1
-    unitProgress[currentUnitKey]++;
-    // 重新載入對應組別的題目
-    loadQuizGroup();
-    // 滾動到測驗區頂部
-    document.getElementById('quiz-title').scrollIntoView({ behavior: 'smooth', block: 'start' });
+// 下一組題目防呆確認
+function confirmNextGroup() {
+    if (confirm("⚠️ 確定要換下一組題目嗎？\n目前的作答紀錄將會被清除喔！")) {
+        unitProgress[currentUnitKey]++;
+        loadQuizGroup();
+        document.getElementById('quiz-title').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
 }
 
 // 渲染測驗區塊
@@ -436,9 +435,13 @@ function renderQuizArea() {
     
     currentQuizData.forEach((q, index) => {
         let typeLabel = q.type === 'concept' ? '🧠' : (q.type === 'calc' ? '✍️' : '🌟');
+        let optionsJson = JSON.stringify(q.options).replace(/"/g, '&quot;');
         
         let html = `<div class="question-block" id="q-block-${index}">
-            <div class="question-title">Q${index + 1}: ${q.q}</div>
+            <div class="question-title">
+                Q${index + 1}: ${q.q}
+                <button type="button" class="speak-btn" onclick="speakQuestion('${q.q}', ${optionsJson})">🔊 唸題目</button>
+            </div>
             <div class="options">`;
             
         q.options.forEach((opt, optIndex) => {
@@ -451,17 +454,15 @@ function renderQuizArea() {
             `;
         });
         
-        html += `</div><div id="exp-${index}" class="explanation" style="display:none;"></div></div>`;
+        html += `</div><div id="feedback-${index}" class="feedback-box"></div></div>`;
         quizContainer.innerHTML += html;
     });
     
-    // 增加一個簡單的腳本來處理自訂 radio button 的視覺點擊效果
+    // 點擊選項時的樣式變化
     document.querySelectorAll('.options input[type="radio"]').forEach(radio => {
         radio.addEventListener('change', function() {
-            // 清除同題的其他選項樣式
             let siblings = document.querySelectorAll(`input[name="${this.name}"] + label span`);
             siblings.forEach(span => { span.style.backgroundColor = 'transparent'; span.style.borderColor = '#ccc'; });
-            // 設定選中選項的樣式
             let currentSpan = this.nextElementSibling.querySelector('span');
             currentSpan.style.backgroundColor = '#2196F3';
             currentSpan.style.borderColor = '#2196F3';
@@ -477,19 +478,28 @@ function submitQuiz() {
     
     currentQuizData.forEach((q, index) => {
         const selected = document.querySelector(`input[name="q${index}"]:checked`);
-        const expDiv = document.getElementById(`exp-${index}`);
+        const feedbackDiv = document.getElementById(`feedback-${index}`);
         const qBlock = document.getElementById(`q-block-${index}`);
         
+        feedbackDiv.style.display = 'block';
+
         if (selected && parseInt(selected.value) === q.ans) {
+            // 答對
             totalScore += q.score;
-            expDiv.style.display = 'none';
+            feedbackDiv.className = 'feedback-box feedback-correct';
+            feedbackDiv.innerHTML = `✅ 答對了！`;
             qBlock.style.borderLeft = "8px solid var(--secondary-color)";
-            removeMistake(currentUnitKey, q.q);
+            removeMistake(currentUnitKey, q.q, true); // true 代表暫不重新渲染畫面，避免卡頓
         } else {
+            // 答錯
             wrongCount++;
-            expDiv.style.display = 'block';
-            let userAnsText = selected ? q.options[parseInt(selected.value)] : "忘記作答囉！";
-            expDiv.innerHTML = `❌ <strong>答錯了。</strong> (你的答案：${userAnsText})<br><strong>💡 老師講解：</strong>${q.exp}`;
+            let userAnsText = selected ? q.options[parseInt(selected.value)] : "未作答";
+            let correctAnsText = q.options[q.ans];
+            
+            feedbackDiv.className = 'feedback-box feedback-wrong';
+            feedbackDiv.innerHTML = `❌ 錯誤。(你的答案：${userAnsText})<br>
+                                     <strong style="color:#D32F2F;">✅ 正確解答應為：${correctAnsText}</strong><br>
+                                     <strong style="color:#555;">💡 說明：</strong>${q.exp}`;
             qBlock.style.borderLeft = "8px solid var(--error-color)";
             saveMistake(currentUnitKey, q);
         }
@@ -507,105 +517,71 @@ function submitQuiz() {
         <p>答錯題數：<strong>${wrongCount}</strong> 題 (答錯的題目已經自動加入下方的錯題本囉)</p>`;
         
     window.scrollTo({ top: resultBox.offsetTop - 50, behavior: 'smooth' });
-    renderMistakes();
+    renderMistakes(); // 最後一次重新渲染錯題區
 }
 
 // ================= 錯題本系統 (LocalStorage) =================
 
+// 防重複寫入錯題本
 function saveMistake(unitKey, questionObj) {
-    let mistakesMap = JSON.parse(localStorage.getItem('mathMistakes')) || {};
-    if (!mistakesMap[unitKey]) mistakesMap[unitKey] = [];
-    
-    let exists = mistakesMap[unitKey].find(q => q.q === questionObj.q);
-    if (!exists) {
-        mistakesMap[unitKey].push(questionObj);
-        localStorage.setItem('mathMistakes', JSON.stringify(mistakesMap));
+    let mistakes = JSON.parse(localStorage.getItem('mistakes_' + unitKey)) || [];
+    let isDuplicate = mistakes.some(m => m.q === questionObj.q);
+    if (!isDuplicate) {
+        mistakes.push(questionObj);
+        localStorage.setItem('mistakes_' + unitKey, JSON.stringify(mistakes));
     }
 }
 
-function removeMistake(unitKey, questionText) {
-    let mistakesMap = JSON.parse(localStorage.getItem('mathMistakes')) || {};
-    if (mistakesMap[unitKey]) {
-        mistakesMap[unitKey] = mistakesMap[unitKey].filter(q => q.q !== questionText);
-        localStorage.setItem('mathMistakes', JSON.stringify(mistakesMap));
+// 單獨移除錯題本內的題目
+function removeMistake(unitKey, questionText, skipRender = false) {
+    let mistakes = JSON.parse(localStorage.getItem('mistakes_' + unitKey)) || [];
+    mistakes = mistakes.filter(m => m.q !== questionText);
+    localStorage.setItem('mistakes_' + unitKey, JSON.stringify(mistakes));
+    if(!skipRender) renderMistakes(); 
+}
+
+// 清空錯題區防呆
+function confirmClearMistakes() {
+    if (confirm("🗑️ 確定要清空這個單元的所有錯題嗎？\n清空後就無法復原囉！")) {
+        localStorage.removeItem('mistakes_' + currentUnitKey);
+        renderMistakes();
+        alert("錯題區已經清空囉！");
     }
 }
 
+// 渲染獨立的錯題區
 function renderMistakes() {
-    let mistakesMap = JSON.parse(localStorage.getItem('mathMistakes')) || {};
-    currentMistakes = mistakesMap[currentUnitKey] || [];
-    
-    const mistakeSection = document.getElementById('mistakes-section');
-    const mistakeContainer = document.getElementById('mistakes-container');
-    
-    if (currentMistakes.length === 0) {
-        mistakeSection.style.display = 'none'; 
+    const container = document.getElementById('mistakes-container');
+    const section = document.getElementById('mistakes-section');
+    let mistakes = JSON.parse(localStorage.getItem('mistakes_' + currentUnitKey)) || [];
+
+    if (mistakes.length === 0) {
+        section.style.display = 'none'; 
         return;
     }
-    
-    mistakeSection.style.display = 'block';
-    mistakeContainer.innerHTML = '';
-    
-    currentMistakes.forEach(q => {
-        let optionsWithIndex = q.options.map((opt, i) => ({ text: opt, isCorrect: i === q.ans }));
-        shuffleArray(optionsWithIndex);
-        q.options = optionsWithIndex.map(o => o.text);
-        q.ans = optionsWithIndex.findIndex(o => o.isCorrect);
-    });
 
-    currentMistakes.forEach((q, index) => {
-        let html = `<div class="question-block" id="mistake-block-${index}" style="border: 2px solid #FFCC80; border-left: 8px solid #FF9800;">
-            <div class="question-title" style="color: #E65100;">⚠️ 挑戰題：${q.q}</div>
-            <div class="options">`;
-            
-        q.options.forEach((opt, optIndex) => {
-            html += `
-                <input type="radio" name="mistake_q${index}" id="mistake_q${index}_opt${optIndex}" value="${optIndex}" style="display:none;">
-                <label for="mistake_q${index}_opt${optIndex}">
-                    <span style="display:inline-block; width:20px; height:20px; border-radius:50%; border:2px solid #ccc; margin-right:10px; flex-shrink:0;"></span>
-                    ${optIndex + 1}. ${opt}
-                </label>
-            `;
-        });
-        
-        html += `</div>
-            <button class="check-mistake-btn" onclick="checkMistake(${index})">送出答案，消滅錯題！</button>
-            <div id="mistake-exp-${index}" class="explanation" style="display:none;"></div>
+    section.style.display = 'block';
+    let html = '';
+
+    mistakes.forEach((m, index) => {
+        let optionsJson = JSON.stringify(m.options).replace(/"/g, '&quot;');
+        let correctAnsText = m.options[m.ans];
+
+        html += `
+        <div class="question-block" style="border-left: 8px solid #F44336; border-color: #F44336;">
+            <div class="question-title" style="color: #C62828;">
+                ⚠️ ${m.q}
+                <button type="button" class="speak-btn" onclick="speakQuestion('${m.q}', ${optionsJson})">🔊 唸這題</button>
+            </div>
+            <div style="background: #FFEBEE; padding: 15px; border-radius: 8px; color: #C62828; font-weight: bold;">
+                <p style="margin-top:0;">✅ 正確選項應為：${correctAnsText}</p>
+                <p style="margin-bottom:0; color:#555;">💡 說明：${m.exp}</p>
+            </div>
+            <button type="button" class="learned-btn" onclick="removeMistake('${currentUnitKey}', '${m.q}')">✅ 我已經學會了</button>
         </div>`;
-        mistakeContainer.innerHTML += html;
     });
 
-    // 為錯題本的選項加上點擊效果
-    document.querySelectorAll('#mistakes-container .options input[type="radio"]').forEach(radio => {
-        radio.addEventListener('change', function() {
-            let siblings = document.querySelectorAll(`input[name="${this.name}"] + label span`);
-            siblings.forEach(span => { span.style.backgroundColor = 'transparent'; span.style.borderColor = '#ccc'; });
-            let currentSpan = this.nextElementSibling.querySelector('span');
-            currentSpan.style.backgroundColor = '#FF9800';
-            currentSpan.style.borderColor = '#FF9800';
-        });
-    });
-}
-
-function checkMistake(index) {
-    const selected = document.querySelector(`input[name="mistake_q${index}"]:checked`);
-    const expDiv = document.getElementById(`mistake-exp-${index}`);
-    const qObj = currentMistakes[index];
-
-    if (!selected) {
-        alert("請先選擇一個答案喔！");
-        return;
-    }
-
-    if (parseInt(selected.value) === qObj.ans) {
-        removeMistake(currentUnitKey, qObj.q);
-        alert("🎉 太棒了！你挑戰成功，這題已經從錯題本中消滅囉！");
-        renderMistakes(); 
-    } else {
-        expDiv.style.display = 'block';
-        let userAnsText = qObj.options[parseInt(selected.value)];
-        expDiv.innerHTML = `❌ <strong>還是不對喔。</strong> (你的答案：${userAnsText})<br><strong>💡 老師講解：</strong>${qObj.exp}`;
-    }
+    container.innerHTML = html;
 }
 
 window.onload = loadCourse;
