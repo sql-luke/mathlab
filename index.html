@@ -35,8 +35,11 @@
 
         <section id="quiz-section" class="card quiz-box">
             <div class="header-actions">
-                <h2 id="quiz-title">🏆 破關測驗</h2>
-                <button type="button" class="random-btn" onclick="randomizeQuiz()">🔀 重新隨機出題</button>
+                <div class="quiz-title-wrapper">
+                    <h2 id="quiz-title">🏆 隨堂大挑戰</h2>
+                    <span id="group-indicator" class="group-badge">目前進度：第 1 組</span>
+                </div>
+                <button type="button" class="random-btn" onclick="nextQuizGroup()">➡️ 下一組題目</button>
             </div>
             <p class="quiz-hint">準備好了嗎？作答完請按最下方的交卷按鈕喔！</p>
             <form id="quiz-form">
